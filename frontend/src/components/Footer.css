@@ -1,0 +1,252 @@
+/* Footer Styles */
+.footer {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 1.5rem 0 0.75rem 0;
+  margin-top: 2rem;
+}
+
+/* Route-specific footer styling */
+.footer.admin-route {
+  background: #2c3e50;
+  border-top: 1px solid #34495e;
+}
+
+.footer.admin-route .footer-brand h3 {
+  color: #ecf0f1;
+}
+
+.footer.admin-route .footer-brand p {
+  color: #bdc3c7;
+}
+
+.footer.admin-route .footer-links h4,
+.footer.admin-route .footer-contact h4 {
+  color: #ecf0f1;
+}
+
+.footer.admin-route .footer-links a {
+  color: #bdc3c7;
+}
+
+.footer.admin-route .footer-links a:hover {
+  color: #3498db;
+}
+
+.footer.admin-route .footer-contact p {
+  color: #bdc3c7;
+}
+
+.footer.admin-route .footer-bottom {
+  border-top: 1px solid #34495e;
+}
+
+.footer.admin-route .footer-bottom p,
+.footer.admin-route .footer-bottom-links a {
+  color: #bdc3c7;
+}
+
+.footer.admin-route .footer-bottom-links a:hover {
+  color: #3498db;
+}
+
+.footer.resident-route {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.footer.resident-route .footer-brand h3 {
+  color: #27ae60;
+}
+
+.footer.resident-route .footer-links a:hover {
+  color: #27ae60;
+}
+
+.footer.resident-route .footer-bottom-links a:hover {
+  color: #27ae60;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Main Footer Section */
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.footer-brand h3 {
+  color: #667eea;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.footer-brand p {
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 280px;
+  font-size: 0.9rem;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #495057;
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #667eea;
+}
+
+/* Disabled footer links for pending users */
+.footer-links a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  position: relative;
+}
+
+.footer-links a.disabled::after {
+  content: " ⏳";
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.footer-links a.disabled:hover {
+  color: #6c757d;
+}
+
+/* Route-specific disabled link styling */
+.footer.admin-route .footer-links a.disabled {
+  color: #7f8c8d;
+}
+
+.footer.admin-route .footer-links a.disabled:hover {
+  color: #7f8c8d;
+}
+
+.footer.resident-route .footer-links a.disabled {
+  color: #95a5a6;
+}
+
+.footer.resident-route .footer-links a.disabled:hover {
+  color: #95a5a6;
+}
+
+.footer-contact p {
+  color: #6c757d;
+  margin: 0 0 0.4rem 0;
+  font-size: 0.85rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #e9ecef;
+  padding-top: 0.75rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-bottom p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-bottom-links a {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #667eea;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.25rem 0 0.75rem 0;
+  }
+  
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: center;
+  }
+  
+  .footer-brand p {
+    max-width: none;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-bottom-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.75rem 0 0.5rem 0;
+  }
+  
+  .footer-main {
+    gap: 0.75rem;
+  }
+  
+  .footer-brand h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 0.95rem;
+  }
+  
+  .footer-bottom-links {
+    gap: 0.75rem;
+  }
+}
